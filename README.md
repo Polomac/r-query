@@ -1,6 +1,7 @@
-# React + Vite
+# React + Vite + React Query
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TanStack Query (FKA React Query) added, for handling data fetching
 
 Currently, two official plugins are available:
 
