@@ -1,18 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import './MovieCard.scss'
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ post }) => {
 
   const navigate = useNavigate()
   
   const handleClick = (id) => {
-    navigate(`/intro/${id}`)
+    navigate(`/comments/${id}`)
   }
 
   return (
-    <div className="movie-card row p-3 mx-0 mb-3" onClick={() => handleClick(movie.episode_id)}>
-      <h5><em>Title:</em>{movie.title}</h5>
-      <p><em>Episode:</em> { movie.episode_id }</p>
+    <div className="movie-card row p-3 mx-0 mb-3" onClick={() => handleClick(post.id)}>
+      <h5><em>Title: </em>{post.title}</h5>
+      <p className='mb-0'>{ post.body }</p>
     </div>
   )
 }

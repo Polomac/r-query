@@ -2,11 +2,11 @@ import { useQuery } from 'react-query'
 import MovieCard from '../components/MovieCard'
 
 const fetchFilms = async () => {
-  const resp = await fetch(`${import.meta.env.VITE_APP_API}/films`)
-  return resp.json()
+  const resp = await fetch(`${import.meta.env.VITE_APP_API}/posts`)
+  return await resp.json()
 }
 
-const Movies = () => {
+const Posts = () => {
 
   const { data, isError, isFetching, error } = useQuery('films', fetchFilms)
 
@@ -19,11 +19,11 @@ const Movies = () => {
       { isError && !isFetching && (
         <div>{ error.message }</div>
       )}
-      { data?.results && !isFetching && (
-        data.results.map(film => <MovieCard key={film.title} movie={film} />)
+      { data && !isFetching && (
+        data.map(post => <MovieCard key={post.title} post={post} />)
       )}
     </div>
   )
 }
 
-export default Movies
+export default Posts

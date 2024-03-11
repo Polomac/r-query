@@ -1,14 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Movies from './pages/Movies'
-import Intro from './pages/Intro'
+import Posts from './pages/Posts'
+import Comments from './pages/Comments'
+import ZuStand from './pages/ZuStand'
 
 const RoutesMod = () => {
   return (
     <Routes>
       <Route path="/" element={ <Home /> } />
-      <Route path="/movies" element={ <Movies /> } />
-      <Route path="/intro/:id" element={ <Intro /> } />
+      <Route path="/posts" element={ <Posts /> } />
+      <Route path="/comments/:id" element={ <Comments /> } />
+      <Route path="/zustand" element={ <ZuStand /> } />
     </Routes>
   )
 }

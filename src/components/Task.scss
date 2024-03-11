@@ -1,0 +1,33 @@
+.task {
+  display: flex;
+  margin-top: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  padding: 10px 10px 0 10px;
+  flex-flow: column;
+  position: relative;
+
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background: crimson;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s linear;
+    line-height: 1.2;
+    &:hover {
+      background: darken(crimson, 10%)
+    }
+  }
+}
