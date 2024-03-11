@@ -11,6 +11,7 @@ const RoutesMod = () => {
       <Route path="/posts" element={ <Posts /> } />
       <Route path="/comments/:id" element={ <Comments /> } />
       <Route path="/zustand" element={ <ZuStand /> } />
+      <Route path="*" element={ <Home /> } />
     </Routes>
   )
 }
